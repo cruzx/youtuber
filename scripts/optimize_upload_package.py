@@ -2,6 +2,8 @@
 """
 Folder-based YouTube upload package optimizer.
 
+Author: Cruz Olli
+
 Inputs are discovered from a project folder:
 - exports/full_video.mp4 or exports/first30.mp4
 - transcripts/transcript.srt, .vtt, or .txt

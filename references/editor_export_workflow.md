@@ -1,5 +1,7 @@
 # Editing Software Export Workflow
 
+Created by **Cruz Olli**
+
 Codex should prefer exported files over trying to infer from a live editing interface.
 
 ## Final Cut Pro

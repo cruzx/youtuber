@@ -1,5 +1,7 @@
 # 创作者 YouTube 运营方法论抽象版
 
+Created by **Cruz Olli**
+
 This file contains generalized creator-business operating principles for YouTube. It is not a transcript collection and should not reproduce protected scripts.
 
 ## Core thesis

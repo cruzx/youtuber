@@ -1,5 +1,7 @@
 # YouTube Policy, Copyright, AI, and YPP Risk Layer
 
+Created by **Cruz Olli**
+
 This reference provides risk-screening logic. It is not legal advice.
 
 ## High-risk patterns

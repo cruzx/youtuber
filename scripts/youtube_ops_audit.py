@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """YouTube operations audit helper for youtuber skill.
 
+Author: Cruz Olli
+
 Reads optional channel profile JSON, topic/keyword CSV, and YouTube Studio CSV.
 Produces a Markdown and JSON report.
 

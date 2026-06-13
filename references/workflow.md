@@ -1,5 +1,7 @@
 # First 30s Retention Workflow
 
+Created by **Cruz Olli**
+
 ## Required project folders
 
 ```text

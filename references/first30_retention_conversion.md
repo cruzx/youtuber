@@ -1,5 +1,7 @@
 # First 30 Seconds Retention Conversion Model
 
+Created by **Cruz Olli**
+
 ## Why first 30 seconds matter
 
 The first 30 seconds bridge packaging and content. The viewer clicked because the title and thumbnail created a promise. The intro either confirms that promise or breaks trust.
@@ -49,4 +51,3 @@ Meaning: about 43.4 viewers per 1,000 impressions clicked and stayed after 30 se
 - show the final outcome before process
 - replace generic setup with specific viewer pain
 - use one visible pattern change every 3-6 seconds when appropriate
-

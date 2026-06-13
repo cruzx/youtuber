@@ -1,5 +1,7 @@
 # Rubrics
 
+Created by **Cruz Olli**
+
 ## Channel diagnosis score
 
 | Area | 1-3 | 4-6 | 7-10 |
@@ -33,4 +35,3 @@
 | Recommended | 75-100 |
 | Cautious | 55-74 |
 | Not recommended | 0-54 |
-

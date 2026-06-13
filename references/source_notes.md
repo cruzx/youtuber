@@ -1,5 +1,7 @@
 # Source Notes
 
+Created by **Cruz Olli**
+
 This skill is based on operational abstractions rather than verbatim transcripts.
 
 ## Public source anchors to verify periodically

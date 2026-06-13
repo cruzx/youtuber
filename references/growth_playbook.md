@@ -1,5 +1,7 @@
 # YouTube Growth Playbook
 
+Created by **Cruz Olli**
+
 Use this reference when the user wants practical growth, upload optimization, live-stream strategy, title/thumbnail/description planning, publishing schedules, or package-to-retention forecasts.
 
 ## Growth principles

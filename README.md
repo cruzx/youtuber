@@ -1,5 +1,7 @@
 # Youtuber Codex Skill
 
+Created by **Cruz Olli**
+
 **English description:** A practical Codex skill for YouTube creators who want better videos, stronger packaging, and a repeatable growth workflow. Drop in video exports, transcripts, thumbnails, keyword data, and YouTube Studio metrics; the skill helps audit the edit, improve the first 30 seconds, write titles/descriptions/keywords, plan thumbnails, choose publish timing, design live/Shorts support, and estimate packaging-to-retention conversion before publishing.
 
 **中文简介：** 一个面向 YouTube 创作者的 Codex Skill，用来做视频发布前优化和频道增长复盘。你可以把视频片段、字幕、封面草图、关键词数据、YouTube Studio 数据放进项目文件夹，它会帮你判断怎么剪、标题/简介/关键词怎么写、封面怎么设计、什么时候发布、是否配合直播/Shorts，并给出封标转化和首 30 秒留存的发布前预测。

@@ -1,5 +1,7 @@
 # YouTube Studio Metrics Mapping
 
+Created by **Cruz Olli**
+
 ## Required post-publish metrics
 
 - CTR / impressions click-through rate.

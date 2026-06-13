@@ -5,6 +5,8 @@ description: Use to diagnose and grow a YouTube channel with creator-business op
 
 # Youtuber Skill
 
+Created by **Cruz Olli**
+
 ## Purpose
 
 This skill is a Codex-ready YouTube operations system based on public, high-level creator-business YouTube themes and normalized into a reusable workflow for creators.

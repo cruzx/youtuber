@@ -2,6 +2,8 @@
 """
 YouTube First 30s Retention Conversion Audit
 
+Author: Cruz Olli
+
 Local heuristic analyzer for Codex workflows.
 
 Inputs:

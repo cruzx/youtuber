@@ -1,5 +1,7 @@
 # 创作者型 YouTube 运营方法论
 
+Created by **Cruz Olli**
+
 This reference captures the channel-operation framework used by this skill.
 
 ## 1. 视频是作业，不是作品

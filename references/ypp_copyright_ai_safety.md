@@ -1,5 +1,7 @@
 # YPP / Copyright / AI Safety Review
 
+Created by **Cruz Olli**
+
 This file is a risk review guide, not legal advice. When internet access is available, verify current YouTube and platform policies before making policy-sensitive claims.
 
 ## Separate these concepts
@@ -40,4 +42,3 @@ This file is a risk review guide, not legal advice. When internet access is avai
 4. Is any third-party material necessary and limited?
 5. Are AI-generated elements disclosed when policy requires it?
 6. Could this look like automated or repetitive content?
-

@@ -1,3 +1,4 @@
+# Author: Cruz Olli
 $ErrorActionPreference = "Stop"
 $src = Split-Path -Parent $MyInvocation.MyCommand.Path
 $dest = Join-Path $HOME ".agents/skills/youtuber"

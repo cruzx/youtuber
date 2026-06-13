@@ -1,5 +1,7 @@
 # Codex + Editing Software Workflow
 
+Created by **Cruz Olli**
+
 Codex does not reliably see a video editor's live UI. The stable workflow is to export files from the editor and let Codex inspect the project folder.
 
 ## Minimum input

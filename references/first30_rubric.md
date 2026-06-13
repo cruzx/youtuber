@@ -1,5 +1,7 @@
 # First 30s Audit Rubric
 
+Created by **Cruz Olli**
+
 ## The opening conversion path
 
 A YouTube opening should convert a viewer through these checks:

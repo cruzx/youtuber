@@ -1,5 +1,7 @@
 # vidIQ 数据辅助层
 
+Created by **Cruz Olli**
+
 vidIQ is a data validation layer, not a content strategy by itself.
 
 ## Use vidIQ for
@@ -62,4 +64,3 @@ what to learn:
 what not to copy:
 my differentiation:
 ```
-

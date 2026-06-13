@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Author: Cruz Olli
 set -euo pipefail
 SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEST_DIR="$HOME/.agents/skills/youtuber"
