@@ -1,0 +1,4 @@
+day,time,activity_score,timezone,notes
+Friday,20:00,82,Asia/Shanghai,example strongest audience window
+Saturday,10:00,75,Asia/Shanghai,example backup window
+Sunday,20:00,78,Asia/Shanghai,example weekend evening window

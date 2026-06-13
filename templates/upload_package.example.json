@@ -1,0 +1,24 @@
+{
+  "channel_name": "",
+  "target_viewer": "",
+  "video_topic": "",
+  "video_promise": "",
+  "viewer_pain": "",
+  "business_goal": "",
+  "format": "long_video",
+  "current_title": "",
+  "thumbnail_text": "",
+  "thumbnail_emotion": "",
+  "preferred_publish_window": "",
+  "live_support": {
+    "use_live": false,
+    "live_topic": "",
+    "live_goal": "",
+    "redirect_target": ""
+  },
+  "shorts_support": {
+    "planned_shorts_count": 3,
+    "shorts_angles": []
+  },
+  "notes": ""
+}
