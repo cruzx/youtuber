@@ -1,0 +1,21 @@
+{
+  "channel_name": "Example Channel",
+  "channel_url": "https://youtube.com/@example",
+  "language": "zh-CN",
+  "target_viewer": "想从0开始做中文YouTube的上班族创作者",
+  "creator_identity": "交互设计师 / YouTuber",
+  "niche": "YouTube运营、账号诊断、自媒体创业",
+  "subscriber_count": 850,
+  "video_count": 42,
+  "recent_30_video_average_views": 1300,
+  "best_video_views": 18000,
+  "publishing_frequency": "每周3条长视频 + 3条Shorts",
+  "current_content_types": ["教程", "案例分析", "问答", "频道诊断"],
+  "monetization_status": "未加入YPP",
+  "business_goal": "咨询 / 课程 / 社群",
+  "time_available_per_week": "12小时",
+  "face_or_voice": "露脸+口播",
+  "ai_usage": "脚本草稿和标题候选",
+  "third_party_material_usage": "少量截图和公开页面演示",
+  "main_problem": "选题不稳定，标题封面点击率波动，前30秒留存未知"
+}
