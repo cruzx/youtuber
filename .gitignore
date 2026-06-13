@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+reports/
+exports/
+*.mp4
+*.mov
+*.m4v
+*.wav
+*.mp3
+*.aac
