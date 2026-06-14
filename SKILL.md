@@ -1,6 +1,6 @@
 ---
 name: youtuber
-description: Use to diagnose and grow a YouTube channel with creator-business operating principles, vidIQ keyword and competitor data, YouTube Studio metrics, YPP/copyright/AI risk checks, live-stream growth loops, upload-package optimization, title/thumbnail/description planning, publishing schedules, and first-30-second retention audits from local video/editing files. Trigger on YouTube运营, 频道诊断, 选题, 标题封面, vidIQ, 首30秒留存, Codex剪辑审计, 上传优化, 直播涨粉, 发布时间, 封标转化, YPP, 版权, Shorts/长视频策略, 日更, 起号计划.
+description: Use to diagnose and grow a YouTube channel with creator-business operating principles, vidIQ keyword and competitor data, YouTube Studio metrics, YPP/copyright/AI risk checks, live-stream growth loops, upload-package optimization, title/thumbnail/description planning, default GPT img2 thumbnail rendering, publishing schedules, and first-30-second retention audits from local video/editing files. Trigger on YouTube运营, 频道诊断, 选题, 标题封面, vidIQ, 首30秒留存, Codex剪辑审计, 上传优化, 直播涨粉, 发布时间, 封标转化, YPP, 版权, Shorts/长视频策略, 日更, 起号计划.
 ---
 
 # Youtuber Skill
@@ -21,6 +21,7 @@ It combines eight layers:
 6. **Upload-package optimization**: title, thumbnail, description, keywords/tags, chapters, pinned comment, end-screen, and playlist plan.
 7. **Publishing schedule and live growth loops**: audience-time analysis, Premiere/live scheduling, Live Redirect, Shorts highlights, and subscriber-conversion CTAs.
 8. **Packaging-to-retention forecasting**: pre-publish risk estimates for CTR, first-30-second retention, and packaging-to-30-second conversion.
+9. **Default thumbnail rendering workflow**: when thumbnail assets are missing or weak, default to GPT img2 for cover generation from the chosen thumbnail brief.
 
 Do not present this skill as a verbatim transcript archive. It is a summarized and operationalized methodology. It must not reproduce protected channel scripts or private content.
 
@@ -320,6 +321,14 @@ Thumbnail rules:
 - complements title instead of repeating it
 - does not create a promise the intro cannot deliver
 
+Default rendering rule:
+
+- When the user asks for a thumbnail image, cover draft, or final cover render, default to GPT img2.
+- Use the chosen thumbnail concept as the source brief and produce 2-3 materially different variants before picking one.
+- If existing thumbnail files are provided, critique them first; if they are weak, still provide a GPT img2 redraw prompt.
+- Keep the prompt operational: subject, framing, facial emotion, background simplicity, contrast, text-safe space, and mobile readability.
+- Prefer the official phrasing `GPT Image / ChatGPT Images 2.0`, but you may refer to it in creator-facing language as `GPT img2`.
+
 Title/thumbnail A/B plan:
 
 - Prepare up to 3 materially different title/thumbnail combinations when the channel has access to YouTube Studio A/B testing.
@@ -400,6 +409,7 @@ thumbnails/thumbnail_b.png
 analytics/vidiq_keywords.csv
 analytics/audience_times.csv
 analytics/youtube_studio.csv
+metadata/upload_package.json with thumbnail_render_model or thumbnail notes
 ```
 
 Run:
@@ -418,6 +428,7 @@ The output must include:
 - description draft with first two lines optimized for the viewer promise
 - keywords/tags with a warning that tags have limited discovery impact
 - thumbnail brief plus 2-3 thumbnail concepts
+- default GPT img2 thumbnail render prompt for the top concept, plus 1-2 alternate prompts
 - recommended publish window based on audience data when available
 - live/Premiere/Shorts support plan when relevant
 - pre-publish CTR, intro-retention, and packaging-to-30-second forecast
@@ -660,6 +671,12 @@ Recommended / Cautious / Not recommended
 ## Thumbnail Concepts
 | Concept | Visual | Text | Why it may work |
 |---|---|---|---|
+
+## Thumbnail Render Default
+- Default renderer: GPT img2
+- Primary prompt:
+- Alternate prompt A:
+- Alternate prompt B:
 
 ## Description Draft
 

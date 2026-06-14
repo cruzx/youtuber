@@ -255,6 +255,36 @@ def thumbnail_concepts(metadata: Dict[str, Any]) -> List[Dict[str, str]]:
     ]
 
 
+def thumbnail_render_prompts(metadata: Dict[str, Any], concepts: List[Dict[str, str]]) -> Tuple[str, List[str]]:
+    topic = str(metadata.get("topic") or metadata.get("video_topic") or "YouTube thumbnail").strip()
+    viewer = str(metadata.get("target_viewer") or "target viewer").strip()
+    emotion = str(metadata.get("thumbnail_emotion") or "surprised, decisive").strip()
+    style_notes = str(metadata.get("thumbnail_style_notes") or "high contrast, simple background, clear focal point, mobile readable").strip()
+    text = str(metadata.get("thumbnail_text") or concepts[0]["text"]).strip()
+    primary = (
+        f"Use GPT img2 to generate a YouTube thumbnail for {viewer}. "
+        f"Topic: {topic}. Visual direction: {concepts[0]['visual']}. "
+        f"Emotional tone: {emotion}. On-thumbnail text: {text}. "
+        f"Style: {style_notes}. Leave clean text-safe space, keep one dominant subject, "
+        f"make it legible on a phone feed, avoid clutter, and use cinematic but realistic lighting."
+    )
+    alternates = [
+        (
+            f"Use GPT img2 to generate a YouTube thumbnail focused on contrast. "
+            f"Topic: {topic}. Visual direction: {concepts[1]['visual']}. "
+            f"Emotion: {emotion}. Text: {concepts[1]['text']}. "
+            f"Keep the background minimal, exaggerate before/after separation, and optimize for mobile CTR."
+        ),
+        (
+            f"Use GPT img2 to generate a clean, high-readability YouTube thumbnail. "
+            f"Topic: {topic}. Visual direction: {concepts[2]['visual']}. "
+            f"Emotion: {emotion}. Text: {concepts[2]['text']}. "
+            f"Use bold composition, strong face/object close-up, simple shapes, and obvious focus markers."
+        ),
+    ]
+    return primary, alternates
+
+
 def forecast(metadata: Dict[str, Any], first_value: Optional[float], thumbnail_count: int, keywords: List[str]) -> Forecast:
     title = str(metadata.get("title") or "")
     promise = str(metadata.get("video_promise") or metadata.get("promise") or "")
@@ -311,6 +341,7 @@ def make_report(inputs: PackageInputs, metadata: Dict[str, Any], transcript_rows
     first_value = first_value_time(transcript_rows)
     titles = title_options(metadata, first30_text, keywords)
     thumbs = thumbnail_concepts(metadata)
+    thumb_prompt, thumb_prompt_alts = thumbnail_render_prompts(metadata, thumbs)
     readiness = "Cautious"
     if inputs.video_path and (metadata.get("video_promise") or metadata.get("promise")) and first_value is not None and first_value <= 12:
         readiness = "Ready after packaging polish"
@@ -360,6 +391,12 @@ def make_report(inputs: PackageInputs, metadata: Dict[str, Any], transcript_rows
     lines.append("|---|---|---|---|")
     for i, t in enumerate(thumbs, 1):
         lines.append(f"| {i} | {t['visual']} | {t['text']} | {t['why']} |")
+    lines.append("")
+    lines.append("## Thumbnail Render Default")
+    lines.append("- Default renderer: GPT img2")
+    lines.append(f"- Primary prompt: {thumb_prompt}")
+    lines.append(f"- Alternate prompt A: {thumb_prompt_alts[0]}")
+    lines.append(f"- Alternate prompt B: {thumb_prompt_alts[1]}")
     lines.append("")
     lines.append("## Description Draft")
     first_title = titles[0]["title"]

@@ -20,8 +20,9 @@ Tasks:
 4. Audit the first 30 seconds and calculate Packaging-to-30s Conversion if analytics data exists.
 5. Identify timestamp-level cuts, moves, and rewrites.
 6. Produce a stronger 0-30s opening.
-7. Produce a 7-day and 30-day action plan.
-8. Save:
+7. Default to GPT img2 for the thumbnail render and give me 1 primary prompt plus 2 alternate prompts.
+8. Produce a 7-day and 30-day action plan.
+9. Save:
    - reports/channel_diagnosis.md
    - reports/topic_validation.md
    - reports/first30_retention_report.md

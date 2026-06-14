@@ -8,8 +8,10 @@
   "business_goal": "",
   "format": "long_video",
   "current_title": "",
+  "thumbnail_render_model": "gpt img2",
   "thumbnail_text": "",
   "thumbnail_emotion": "",
+  "thumbnail_style_notes": "",
   "preferred_publish_window": "",
   "live_support": {
     "use_live": false,

@@ -2,9 +2,9 @@
 
 Created by **Cruz Olli**
 
-**English description:** A practical Codex skill for YouTube creators who want better videos, stronger packaging, and a repeatable growth workflow. Drop in video exports, transcripts, thumbnails, keyword data, and YouTube Studio metrics; the skill helps audit the edit, improve the first 30 seconds, write titles/descriptions/keywords, plan thumbnails, choose publish timing, design live/Shorts support, and estimate packaging-to-retention conversion before publishing.
+**English description:** A practical Codex skill for YouTube creators who want better videos, stronger packaging, and a repeatable growth workflow. Drop in video exports, transcripts, thumbnails, keyword data, and YouTube Studio metrics; the skill helps audit the edit, improve the first 30 seconds, write titles/descriptions/keywords, plan thumbnails, default to GPT img2 for cover rendering, choose publish timing, design live/Shorts support, and estimate packaging-to-retention conversion before publishing.
 
-**中文简介：** 一个面向 YouTube 创作者的 Codex Skill，用来做视频发布前优化和频道增长复盘。你可以把视频片段、字幕、封面草图、关键词数据、YouTube Studio 数据放进项目文件夹，它会帮你判断怎么剪、标题/简介/关键词怎么写、封面怎么设计、什么时候发布、是否配合直播/Shorts，并给出封标转化和首 30 秒留存的发布前预测。
+**中文简介：** 一个面向 YouTube 创作者的 Codex Skill，用来做视频发布前优化和频道增长复盘。你可以把视频片段、字幕、封面草图、关键词数据、YouTube Studio 数据放进项目文件夹，它会帮你判断怎么剪、标题/简介/关键词怎么写、封面怎么设计，并默认使用 GPT img2 来绘制封面，安排发布时间、直播/Shorts 配合策略，并给出封标转化和首 30 秒留存的发布前预测。
 
 This package contains operational templates, local helper scripts, and creator-growth workflows. It does not promise virality, subscriber counts, or view counts; it produces evidence-based recommendations and conservative forecasts.
 
@@ -16,6 +16,7 @@ This package contains operational templates, local helper scripts, and creator-g
 - First-30-second retention audits
 - Full upload-package optimization before publishing
 - Title, description, keyword, and thumbnail planning
+- Default GPT img2 thumbnail rendering
 - Publish-time recommendations from audience activity data
 - Live-stream, Premiere, and Shorts support plans
 - Packaging-to-30-second conversion forecasts
@@ -29,6 +30,7 @@ This package contains operational templates, local helper scripts, and creator-g
 - 首 30 秒留存审计
 - 发布前完整上传包优化
 - 标题、简介、关键词、封面方案
+- 默认使用 GPT img2 生成封面图
 - 基于观众活跃时间的发布时间建议
 - 直播、Premiere、Shorts 支持方案
 - 封标转化与首 30 秒留存预测
@@ -72,7 +74,7 @@ The installer copies this folder to:
 Use $youtuber.
 Analyze this YouTube upload package.
 Read exports/, transcripts/, metadata/upload_package.json, analytics/, timeline/, and thumbnails/ if present.
-Tell me how to edit the video for better playback, which title/thumbnail/description/keywords to use, when to publish, whether to support it with live/Shorts/Premiere, and forecast CTR, first-30-second retention, and Packaging-to-30s Conversion.
+Tell me how to edit the video for better playback, which title/thumbnail/description/keywords to use, render the cover by default with GPT img2, when to publish, whether to support it with live/Shorts/Premiere, and forecast CTR, first-30-second retention, and Packaging-to-30s Conversion.
 Generate reports/upload_package_optimization.md.
 ```
 
@@ -101,7 +103,7 @@ python scripts/analyze_first30.py \
 
 ### Upload package optimization
 
-Use this when you want to drop a video project folder into Codex and get edit notes, title options, description, keywords, thumbnail concepts, publish timing, live/Shorts support, and a packaging forecast.
+Use this when you want to drop a video project folder into Codex and get edit notes, title options, description, keywords, thumbnail concepts, default GPT img2 render prompts, publish timing, live/Shorts support, and a packaging forecast.
 
 ```bash
 python scripts/optimize_upload_package.py \
@@ -172,11 +174,11 @@ analytics/youtube_studio.csv
 English:
 
 ```text
-A Codex skill for YouTube creators: audit edits, optimize titles/thumbnails/descriptions, plan publishing and live/Shorts growth loops, and forecast packaging-to-retention conversion from local video project folders.
+A Codex skill for YouTube creators: audit edits, optimize titles/thumbnails/descriptions, default to GPT img2 for cover generation, plan publishing and live/Shorts growth loops, and forecast packaging-to-retention conversion from local video project folders.
 ```
 
 中文：
 
 ```text
-一个面向 YouTube 创作者的 Codex Skill：从本地视频项目文件夹出发，审计剪辑、优化标题封面简介、规划发布时间和直播/Shorts 增长链路，并预测封标转化与首 30 秒留存。
+一个面向 YouTube 创作者的 Codex Skill：从本地视频项目文件夹出发，审计剪辑、优化标题封面简介、默认用 GPT img2 生成封面、规划发布时间和直播/Shorts 增长链路，并预测封标转化与首 30 秒留存。
 ```
