@@ -1,6 +1,6 @@
 ---
 name: youtuber
-description: Use to diagnose and grow a YouTube channel with creator-business operating principles, vidIQ keyword and competitor data, YouTube Studio metrics, YPP/copyright/AI risk checks, live-stream growth loops, upload-package optimization, title/thumbnail/description planning, default GPT img2 thumbnail rendering, publishing schedules, and first-30-second retention audits from local video/editing files. Trigger on YouTube运营, 频道诊断, 选题, 标题封面, vidIQ, 首30秒留存, Codex剪辑审计, 上传优化, 直播涨粉, 发布时间, 封标转化, YPP, 版权, Shorts/长视频策略, 日更, 起号计划.
+description: Use to diagnose and grow a YouTube channel with creator-business operating principles, vidIQ keyword and competitor data, YouTube Studio metrics, YPP/copyright/AI risk checks, live-stream growth loops, upload-package optimization, title/thumbnail/description planning, default GPT img2 thumbnail rendering, publishing schedules, first-30-second retention audits from local video/editing files, and post-publish learning loops that turn video results into reusable channel knowledge. Trigger on YouTube运营, 频道诊断, 选题, 标题封面, vidIQ, 首30秒留存, Codex剪辑审计, 上传优化, 直播涨粉, 发布时间, 封标转化, 发布复盘, 自我学习, 账号经验库, YPP, 版权, Shorts/长视频策略, 日更, 起号计划.
 ---
 
 # Youtuber Skill
@@ -11,7 +11,7 @@ Created by **Cruz Olli**
 
 This skill is a Codex-ready YouTube operations system based on public, high-level creator-business YouTube themes and normalized into a reusable workflow for creators.
 
-It combines eight layers:
+It combines ten layers:
 
 1. **Creator-business operating principles**: YouTube as a long-term creator-business system, not a single-video lottery.
 2. **Channel strategy**: positioning, niche selection, content pillars, publishing cadence, and monetization path.
@@ -22,6 +22,7 @@ It combines eight layers:
 7. **Publishing schedule and live growth loops**: audience-time analysis, Premiere/live scheduling, Live Redirect, Shorts highlights, and subscriber-conversion CTAs.
 8. **Packaging-to-retention forecasting**: pre-publish risk estimates for CTR, first-30-second retention, and packaging-to-30-second conversion.
 9. **Default thumbnail rendering workflow**: when thumbnail assets are missing or weak, default to GPT img2 for cover generation from the chosen thumbnail brief.
+10. **Post-publish learning loop**: turn each video's measured results into reusable channel rules, title patterns, thumbnail preferences, platform differences, and future packaging decisions.
 
 Do not present this skill as a verbatim transcript archive. It is a summarized and operationalized methodology. It must not reproduce protected channel scripts or private content.
 
@@ -39,6 +40,8 @@ Use this skill when the user asks to:
 - Use vidIQ data inside a YouTube workflow.
 - Check YPP, copyright, reused-content, AI-generation, or monetization risk.
 - Create a Codex workflow that reads files exported from video-editing software.
+- Review published-video performance and update the creator's reusable channel knowledge base.
+- Compare YouTube, Bilibili, Shorts, long-form, live, and Premiere outcomes after publishing.
 
 ## Operating philosophy
 
@@ -163,6 +166,8 @@ For Codex projects, use this structure:
     youtube_studio.csv
     vidiq_keywords.csv
     audience_times.csv
+    video_results.csv
+    thumbnail_tests.csv
   /timeline
     timeline.fcpxml
     timeline.xml
@@ -171,6 +176,13 @@ For Codex projects, use this structure:
     thumbnail_a.png
     thumbnail_b.png
     thumbnail_c.png
+  /learning
+    creator_style_guide.md
+    platform_rules.md
+    title_patterns.md
+    video_results.csv
+    thumbnail_tests.csv
+    learning_log.md
   /reports
 ```
 
@@ -506,7 +518,52 @@ Use combinations:
 | high views, low subscribers | weak channel promise or creator identity | add series and follow reason |
 | high comments, low views | narrow but engaged audience | deepen niche and test adjacent topics |
 
-### Step 12: Apply YPP / copyright / AI risk review
+### Step 12: Update the channel learning loop
+
+This skill can improve its recommendations for a specific creator by learning from measured results the user provides. It does not silently update itself. Only write or revise learning files when the user asks for post-publish review, learning, self-improvement, or channel memory.
+
+Use these inputs when available:
+
+```text
+analytics/video_results.csv
+analytics/thumbnail_tests.csv
+reports/upload_package_optimization.json
+learning/creator_style_guide.md
+learning/platform_rules.md
+learning/title_patterns.md
+learning/learning_log.md
+```
+
+Learning rules:
+
+- Treat YouTube Studio, Bilibili creator analytics, and platform dashboards as measured truth.
+- Separate platform-specific behavior: YouTube packaging often rewards direct click reasons; Bilibili may reward freshness, authenticity, creator affinity, and less aggressive covers depending on niche.
+- Learn from metric combinations, not single numbers.
+- Store observations as hypotheses until repeated across at least 3 comparable videos.
+- Never overfit one outlier video into a permanent rule.
+- Keep personal creator taste separate from performance evidence.
+- Do not claim the skill has autonomously evolved; say which files were updated and which data supported the update.
+
+Run the learning updater:
+
+```bash
+python scripts/update_learning_profile.py \
+  --project-dir . \
+  --out-dir reports
+```
+
+Learning output must include:
+
+- winning and losing title patterns
+- thumbnail patterns by platform
+- topic/category patterns
+- publish timing signals
+- intro-retention signals
+- subscriber-conversion signals
+- next 3 rules to test
+- recommended edits to `learning/creator_style_guide.md`, `learning/platform_rules.md`, or `learning/title_patterns.md`
+
+### Step 13: Apply YPP / copyright / AI risk review
 
 Always separate:
 
@@ -533,7 +590,7 @@ Hard rule:
 Permission to use content does not automatically mean it is monetizable.
 ```
 
-### Step 13: Produce action plan
+### Step 14: Produce action plan
 
 Every output must end with concrete next steps:
 
@@ -542,6 +599,7 @@ Every output must end with concrete next steps:
 - next 30-day testing plan
 - metrics to review
 - exact assets/files to change
+- what to add to the learning log after publishing
 
 ## Output templates
 
@@ -701,7 +759,47 @@ Recommended / Cautious / Not recommended
 | First 30s retention | | | |
 | Packaging-to-30s conversion | | | |
 
+## Learning Plan
+- Metrics to record after publishing:
+- Hypotheses being tested:
+- What would count as a win:
+- What to add to `learning/learning_log.md`:
+
 ## Next 3 actions
+```
+
+### Post-publish learning report
+
+```markdown
+# Post-Publish Learning Report
+
+## Verdict
+- What worked:
+- What underperformed:
+- What is still unclear:
+
+## Measured Results
+| Video | Platform | CTR | First 30s retention | Average view duration | Subscribers gained | Notes |
+|---|---|---:|---:|---:|---:|---|
+
+## Patterns Learned
+- Title:
+- Thumbnail:
+- Opening:
+- Topic:
+- Publish timing:
+- Platform differences:
+
+## Rules To Keep Testing
+1.
+2.
+3.
+
+## Suggested Learning File Updates
+- `learning/creator_style_guide.md`:
+- `learning/platform_rules.md`:
+- `learning/title_patterns.md`:
+- `learning/learning_log.md`:
 ```
 
 ## Scripts
@@ -713,6 +811,7 @@ scripts/analyze_first30.py       # first-30s opening audit
 scripts/youtube_ops_audit.py     # channel/topic/data diagnosis helper
 scripts/optimize_upload_package.py # folder-based edit, packaging, schedule, and forecast helper
 scripts/generate_thumbnail_image.py # direct OpenAI image generation to local PNG files
+scripts/update_learning_profile.py # post-publish results review and channel learning helper
 ```
 
 Run the operations audit:
@@ -745,6 +844,14 @@ python scripts/generate_thumbnail_image.py \
   --save-metadata reports/thumbnail_generation_primary.json
 ```
 
+Run the post-publish learning loop:
+
+```bash
+python scripts/update_learning_profile.py \
+  --project-dir . \
+  --out-dir reports
+```
+
 ## Quality bar
 
 The assistant using this skill must:
@@ -761,6 +868,8 @@ The assistant using this skill must:
 - never let policy-sensitive answers depend only on memory when internet access is available
 - never over-weight tags; title, thumbnail, description, retention, and viewer satisfaction are more important
 - always separate pre-publish estimates from post-publish measured data
+- only update learning files when the user asks for learning, self-improvement, or post-publish review
+- distinguish durable channel rules from one-video hypotheses
 
 ## Reference files
 
@@ -772,4 +881,5 @@ Load these only when needed:
 - `references/ypp_copyright_ai_safety.md`: monetization, copyright, reused-content, AI risk review.
 - `references/codex_editor_workflow.md`: how to connect Codex to editing exports.
 - `references/growth_playbook.md`: live, Shorts, schedule, packaging test, and distribution loop.
+- `references/learning_loop.md`: post-publish learning, channel memory, and reusable creator-specific rules.
 - `references/rubrics.md`: scoring tables.

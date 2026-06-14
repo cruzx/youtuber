@@ -2,9 +2,9 @@
 
 Created by **Cruz Olli**
 
-**English description:** A practical Codex skill for YouTube creators who want better videos, stronger packaging, and a repeatable growth workflow. Drop in video exports, transcripts, thumbnails, keyword data, and YouTube Studio metrics; the skill helps audit the edit, improve the first 30 seconds, write titles/descriptions/keywords, plan thumbnails, default to GPT img2 for cover rendering, choose publish timing, design live/Shorts support, and estimate packaging-to-retention conversion before publishing.
+**English description:** A practical Codex skill for YouTube creators who want better videos, stronger packaging, and a repeatable growth workflow. Drop in video exports, transcripts, thumbnails, keyword data, and YouTube Studio metrics; the skill helps audit the edit, improve the first 30 seconds, write titles/descriptions/keywords, plan thumbnails, default to GPT img2 for cover rendering, choose publish timing, design live/Shorts support, estimate packaging-to-retention conversion before publishing, and turn post-publish results into reusable channel learning.
 
-**中文简介：** 一个面向 YouTube 创作者的 Codex Skill，用来做视频发布前优化和频道增长复盘。你可以把视频片段、字幕、封面草图、关键词数据、YouTube Studio 数据放进项目文件夹，它会帮你判断怎么剪、标题/简介/关键词怎么写、封面怎么设计，并默认使用 GPT img2 来绘制封面，安排发布时间、直播/Shorts 配合策略，并给出封标转化和首 30 秒留存的发布前预测。
+**中文简介：** 一个面向 YouTube 创作者的 Codex Skill，用来做视频发布前优化、频道增长复盘和账号经验沉淀。你可以把视频片段、字幕、封面草图、关键词数据、YouTube Studio 数据放进项目文件夹，它会帮你判断怎么剪、标题/简介/关键词怎么写、封面怎么设计，并默认使用 GPT img2 来绘制封面，安排发布时间、直播/Shorts 配合策略，给出封标转化和首 30 秒留存的发布前预测，并在发布后把真实数据沉淀成下一次可复用的频道规则。
 
 This package contains operational templates, local helper scripts, and creator-growth workflows. It does not promise virality, subscriber counts, or view counts; it produces evidence-based recommendations and conservative forecasts.
 
@@ -21,6 +21,8 @@ This package contains operational templates, local helper scripts, and creator-g
 - Publish-time recommendations from audience activity data
 - Live-stream, Premiere, and Shorts support plans
 - Packaging-to-30-second conversion forecasts
+- Post-publish learning loop from real performance data
+- Creator-specific style guide and platform rules
 - YPP, copyright, AI, and reused-content risk checks
 
 ## 中文功能概览
@@ -36,6 +38,8 @@ This package contains operational templates, local helper scripts, and creator-g
 - 基于观众活跃时间的发布时间建议
 - 直播、Premiere、Shorts 支持方案
 - 封标转化与首 30 秒留存预测
+- 发布后数据复盘与账号经验库沉淀
+- 创作者风格指南和平台差异规则
 - YPP、版权、AI、重复内容风险检查
 
 ## Install
@@ -130,6 +134,8 @@ python scripts/optimize_upload_package.py \
     youtube_studio.csv
     vidiq_keywords.csv
     audience_times.csv
+    video_results.csv
+    thumbnail_tests.csv
   /timeline
     timeline.fcpxml
     timeline.xml
@@ -137,6 +143,11 @@ python scripts/optimize_upload_package.py \
   /thumbnails
     thumbnail_a.png
     thumbnail_b.png
+  /learning
+    creator_style_guide.md
+    platform_rules.md
+    title_patterns.md
+    learning_log.md
   /reports
 ```
 
@@ -160,6 +171,8 @@ thumbnails/thumbnail_b.png
 analytics/vidiq_keywords.csv
 analytics/audience_times.csv
 analytics/youtube_studio.csv
+analytics/video_results.csv
+analytics/thumbnail_tests.csv
 ```
 
 ## Output Reports
@@ -170,6 +183,8 @@ analytics/youtube_studio.csv
 - `reports/first30_retention_report.json`
 - `reports/youtube_ops_audit.md`
 - `reports/youtube_ops_audit.json`
+- `reports/post_publish_learning_report.md`
+- `reports/post_publish_learning_report.json`
 
 ## Direct Thumbnail Render
 
@@ -192,16 +207,51 @@ python scripts/generate_thumbnail_image.py --variant alt-a
 python scripts/generate_thumbnail_image.py --variant alt-b
 ```
 
+## Post-Publish Learning Loop
+
+After a video is published, add the measured results to:
+
+```text
+analytics/video_results.csv
+analytics/thumbnail_tests.csv
+```
+
+Then run:
+
+```bash
+python scripts/update_learning_profile.py \
+  --project-dir . \
+  --out-dir reports
+```
+
+The script creates:
+
+```text
+reports/post_publish_learning_report.md
+reports/post_publish_learning_report.json
+```
+
+Use the report to update:
+
+```text
+learning/creator_style_guide.md
+learning/platform_rules.md
+learning/title_patterns.md
+learning/learning_log.md
+```
+
+The learning loop is intentionally conservative: one video creates a hypothesis, not a permanent rule. Promote a pattern only after it repeats across comparable uploads.
+
 ## Repository Description
 
 English:
 
 ```text
-A Codex skill for YouTube creators: audit edits, optimize titles/thumbnails/descriptions, default to GPT img2 for cover generation, plan publishing and live/Shorts growth loops, and forecast packaging-to-retention conversion from local video project folders.
+A Codex skill for YouTube creators: audit edits, optimize titles/thumbnails/descriptions, default to GPT img2 for cover generation, plan publishing and live/Shorts growth loops, forecast packaging-to-retention conversion from local video project folders, and turn post-publish results into reusable channel learning.
 ```
 
 中文：
 
 ```text
-一个面向 YouTube 创作者的 Codex Skill：从本地视频项目文件夹出发，审计剪辑、优化标题封面简介、默认用 GPT img2 生成封面、规划发布时间和直播/Shorts 增长链路，并预测封标转化与首 30 秒留存。
+一个面向 YouTube 创作者的 Codex Skill：从本地视频项目文件夹出发，审计剪辑、优化标题封面简介、默认用 GPT img2 生成封面、规划发布时间和直播/Shorts 增长链路，预测封标转化与首 30 秒留存，并把发布后的真实数据沉淀成可复用的账号经验。
 ```

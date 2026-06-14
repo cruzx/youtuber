@@ -1,0 +1,3 @@
+video_id,platform,test_date,variant,thumbnail_text,title,impressions,views,ctr_percent,average_view_duration_seconds,watch_time_hours,subscribers_gained,result_notes
+example_001,YouTube,2026-06-15,A,"LIJIANG FOOD TOUR","A Full Day of Eating in Lijiang, China",5000,330,6.6,252,23.1,10,"Clean food-tour promise performed steadily."
+example_001,YouTube,2026-06-15,B,"WE ATE EVERYTHING","We Ate Everything in Lijiang",5000,290,5.8,210,16.9,5,"More aggressive text did not improve watch quality in this example."
