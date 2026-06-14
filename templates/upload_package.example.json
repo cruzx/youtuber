@@ -9,6 +9,7 @@
   "format": "long_video",
   "current_title": "",
   "thumbnail_render_model": "gpt img2",
+  "thumbnail_output_name": "generated_thumbnail_primary.png",
   "thumbnail_text": "",
   "thumbnail_emotion": "",
   "thumbnail_style_notes": "",

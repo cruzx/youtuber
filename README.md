@@ -17,6 +17,7 @@ This package contains operational templates, local helper scripts, and creator-g
 - Full upload-package optimization before publishing
 - Title, description, keyword, and thumbnail planning
 - Default GPT img2 thumbnail rendering
+- Direct thumbnail PNG generation to `thumbnails/`
 - Publish-time recommendations from audience activity data
 - Live-stream, Premiere, and Shorts support plans
 - Packaging-to-30-second conversion forecasts
@@ -31,6 +32,7 @@ This package contains operational templates, local helper scripts, and creator-g
 - 发布前完整上传包优化
 - 标题、简介、关键词、封面方案
 - 默认使用 GPT img2 生成封面图
+- 可直接生成封面 PNG 到 `thumbnails/`
 - 基于观众活跃时间的发布时间建议
 - 直播、Premiere、Shorts 支持方案
 - 封标转化与首 30 秒留存预测
@@ -103,7 +105,7 @@ python scripts/analyze_first30.py \
 
 ### Upload package optimization
 
-Use this when you want to drop a video project folder into Codex and get edit notes, title options, description, keywords, thumbnail concepts, default GPT img2 render prompts, publish timing, live/Shorts support, and a packaging forecast.
+Use this when you want to drop a video project folder into Codex and get edit notes, title options, description, keywords, thumbnail concepts, default GPT img2 render prompts, direct thumbnail PNG output, publish timing, live/Shorts support, and a packaging forecast.
 
 ```bash
 python scripts/optimize_upload_package.py \
@@ -168,6 +170,27 @@ analytics/youtube_studio.csv
 - `reports/first30_retention_report.json`
 - `reports/youtube_ops_audit.md`
 - `reports/youtube_ops_audit.json`
+
+## Direct Thumbnail Render
+
+If you want the skill to create the image file, not just the prompt:
+
+```bash
+OPENAI_API_KEY=your_key_here \
+python scripts/generate_thumbnail_image.py \
+  --metadata metadata/upload_package.json \
+  --variant primary \
+  --out thumbnails/generated_thumbnail_primary.png \
+  --save-prompt reports/thumbnail_prompt_primary.txt \
+  --save-metadata reports/thumbnail_generation_primary.json
+```
+
+You can also switch variants:
+
+```bash
+python scripts/generate_thumbnail_image.py --variant alt-a
+python scripts/generate_thumbnail_image.py --variant alt-b
+```
 
 ## Repository Description
 

@@ -328,6 +328,8 @@ Default rendering rule:
 - If existing thumbnail files are provided, critique them first; if they are weak, still provide a GPT img2 redraw prompt.
 - Keep the prompt operational: subject, framing, facial emotion, background simplicity, contrast, text-safe space, and mobile readability.
 - Prefer the official phrasing `GPT Image / ChatGPT Images 2.0`, but you may refer to it in creator-facing language as `GPT img2`.
+- When the user wants an actual output image, not just a brief, generate the file into `thumbnails/generated_thumbnail_*.png` by default.
+- Use `scripts/generate_thumbnail_image.py` when `OPENAI_API_KEY` is available and a local output file is needed.
 
 Title/thumbnail A/B plan:
 
@@ -429,6 +431,7 @@ The output must include:
 - keywords/tags with a warning that tags have limited discovery impact
 - thumbnail brief plus 2-3 thumbnail concepts
 - default GPT img2 thumbnail render prompt for the top concept, plus 1-2 alternate prompts
+- if image generation is requested and credentials exist, generate at least 1 real thumbnail PNG into `thumbnails/`
 - recommended publish window based on audience data when available
 - live/Premiere/Shorts support plan when relevant
 - pre-publish CTR, intro-retention, and packaging-to-30-second forecast
@@ -677,6 +680,8 @@ Recommended / Cautious / Not recommended
 - Primary prompt:
 - Alternate prompt A:
 - Alternate prompt B:
+- Default output path: `thumbnails/generated_thumbnail_primary.png`
+- If local rendering is requested: run `scripts/generate_thumbnail_image.py`
 
 ## Description Draft
 
@@ -707,6 +712,7 @@ This skill includes:
 scripts/analyze_first30.py       # first-30s opening audit
 scripts/youtube_ops_audit.py     # channel/topic/data diagnosis helper
 scripts/optimize_upload_package.py # folder-based edit, packaging, schedule, and forecast helper
+scripts/generate_thumbnail_image.py # direct OpenAI image generation to local PNG files
 ```
 
 Run the operations audit:
@@ -725,6 +731,18 @@ Run the upload-package optimizer:
 python scripts/optimize_upload_package.py \
   --project-dir . \
   --out-dir reports
+```
+
+Render the thumbnail image:
+
+```bash
+OPENAI_API_KEY=your_key_here \
+python scripts/generate_thumbnail_image.py \
+  --metadata metadata/upload_package.json \
+  --variant primary \
+  --out thumbnails/generated_thumbnail_primary.png \
+  --save-prompt reports/thumbnail_prompt_primary.txt \
+  --save-metadata reports/thumbnail_generation_primary.json
 ```
 
 ## Quality bar

@@ -397,6 +397,7 @@ def make_report(inputs: PackageInputs, metadata: Dict[str, Any], transcript_rows
     lines.append(f"- Primary prompt: {thumb_prompt}")
     lines.append(f"- Alternate prompt A: {thumb_prompt_alts[0]}")
     lines.append(f"- Alternate prompt B: {thumb_prompt_alts[1]}")
+    lines.append("- Direct render command: OPENAI_API_KEY=your_key_here python scripts/generate_thumbnail_image.py --metadata metadata/upload_package.json --variant primary --out thumbnails/generated_thumbnail_primary.png --save-prompt reports/thumbnail_prompt_primary.txt --save-metadata reports/thumbnail_generation_primary.json")
     lines.append("")
     lines.append("## Description Draft")
     first_title = titles[0]["title"]
