@@ -562,6 +562,9 @@ The output must include:
 - recommended publish window based on audience data when available
 - live/Premiere/Shorts support plan when relevant
 - pre-publish CTR, intro-retention, and packaging-to-30-second forecast
+- subscriber-conversion plan
+- CTA and description-link conversion plan
+- funnel path from video to the next desired business action
 
 Upload-package decision tree:
 
@@ -572,6 +575,108 @@ Upload-package decision tree:
 | Good video, no subscriber reason | views do not become fans | add series promise, pinned comment, end screen, next-video path |
 | Search topic, weak metadata | discovery is under-supported | tighten title/description/query coverage first; then use tags to reinforce missing concepts |
 | Live topic, no replay plan | live spike disappears | clip Shorts, redirect to Premiere/VOD, pin next action |
+
+#### Step 8A: Design subscriber conversion
+
+The goal is not only to get views. The viewer should understand why to stay with the channel.
+
+Subscriber-conversion rules:
+
+- make the channel promise explicit inside the video, not only in the bio
+- give a reason to subscribe for the next result, next series step, or next recurring format
+- place the subscribe ask after value or proof, not before trust exists
+- connect the current video to a repeatable content arc
+- use end screen, pinned comment, and spoken CTA to point to the next logical watch
+
+Subscriber-conversion diagnosis:
+
+| Pattern | Likely problem | Fix |
+|---|---|---|
+| views high, subscribers low | viewer got value but no follow reason | add series identity and explicit future payoff |
+| average view duration good, subscribers low | trust exists but channel promise is weak | clarify who the channel helps and what comes next |
+| returning viewers low | videos do not compound into a habit | build recurring formats, playlists, and sequel logic |
+| subscribers gained only on one format | conversion depends on a narrow content type | identify what promise that format makes and generalize it |
+
+Subscriber-conversion checklist:
+
+- What specific future value does subscribing unlock?
+- Is there a named series, recurring promise, or ongoing transformation?
+- Does the video say who should subscribe and why?
+- Does the end screen point to the best next watch?
+- Does the pinned comment extend the same channel promise?
+
+#### Step 8B: Design CTA and description-link conversion
+
+Description links and CTAs should move the right viewers to the next action without breaking viewer trust.
+
+CTA rules:
+
+- one primary CTA per video is better than multiple competing asks
+- match the CTA to the video intent: subscribe, lead magnet, consultation, affiliate, product, or community
+- put the highest-intent link near the top of the description
+- make the first CTA benefit-led, not generic
+- align spoken CTA, pinned comment, and description link around the same next step
+
+CTA ladder:
+
+| Viewer stage | Best CTA type |
+|---|---|
+| cold search viewer | watch next, subscribe, free resource |
+| engaged viewer | newsletter, checklist, template, community |
+| high-intent problem solver | consultation, demo, affiliate tool, product |
+| repeat viewer / fan | membership, paid product, cohort, community upgrade |
+
+Description-link diagnosis:
+
+| Pattern | Likely problem | Fix |
+|---|---|---|
+| strong views, weak link clicks | CTA is too vague or too early | rewrite around a clearer benefit and place it near the top |
+| clicks present, poor conversions | offer-message mismatch | align the landing promise with the video promise |
+| many links, weak action | choice overload | reduce to one main CTA and one backup CTA |
+| good comments, weak off-platform action | trust exists but next step feels too large | add a smaller intermediate offer such as a checklist or email opt-in |
+
+#### Step 8C: Map the YouTube business funnel
+
+Treat YouTube as a funnel, not a single upload surface.
+
+Core funnel:
+
+```text
+topic -> click -> first 30s retention -> watch satisfaction -> subscribe or next watch -> trust -> CTA click -> landing conversion -> revenue or lead
+```
+
+For Shorts-led systems:
+
+```text
+Shorts -> profile / related long video -> long video trust -> subscribe -> lead magnet or offer
+```
+
+For live-led systems:
+
+```text
+live topic promise -> live engagement -> replay / clips -> subscribe -> next long video or offer
+```
+
+Business-funnel rules:
+
+- do not send low-trust viewers directly to a high-friction offer by default
+- match offer complexity to viewer awareness
+- use long videos for trust, Shorts for discovery, live for relationship density
+- decide which conversion matters most for each video before publishing
+- track where the funnel breaks instead of blaming the whole video
+
+#### Step 8D: Adapt conversion strategy by channel type
+
+Different channel models convert differently. Do not use one conversion script for every channel.
+
+| Channel type | Primary conversion | Best levers | Main risk |
+|---|---|---|---|
+| search-led education | next watch, subscribe, free resource | title precision, clear teaching promise, resource CTA | useful but forgettable videos |
+| personality-led creator | subscribe, community, membership | identity, story, recurring worldview, parasocial trust | strong engagement but weak search |
+| authority/business channel | consultation, lead, product | proof, case studies, transformation, credibility | too sales-heavy too early |
+| entertainment channel | repeat viewing, subscribe, merch or sponsor lift | format repeatability, audience habit, character or premise | high views with weak downstream conversion |
+| news or trend channel | freshness, repeat visitation, newsletter | speed, interpretation, publishing rhythm | fast decay and low long-tail trust |
+| live-heavy channel | community, subscribe, offer conversion | interaction density, clips, follow-up assets | live spikes that do not compound |
 
 ### Phase 3: Distribution, review, and learning
 
@@ -644,6 +749,16 @@ For search-led videos, also review:
 | impressions present, CTR low | search relevance exists but packaging is weak | improve click reason without breaking query alignment |
 | CTR okay, watch time weak | metadata matched but viewer satisfaction failed | tighten the intro and structure to better fulfill the search promise |
 
+For conversion-led review, also inspect:
+
+| Pattern | Likely problem | First fix |
+|---|---|---|
+| watch time healthy, subscribers weak | channel promise is unclear | add a clearer subscribe reason and next-video path |
+| subscribers healthy, revenue weak | trust exists but offer path is weak | redesign CTA ladder and landing offer alignment |
+| link clicks weak, comments strong | audience likes the content but not the ask | replace generic CTA with a smaller, benefit-led next step |
+| Shorts views high, long-video carryover weak | discovery is disconnected from trust asset | redesign the bridge from Shorts to long video or profile |
+| live engagement high, post-live conversion weak | interaction is not being captured into an asset | add replay path, clips, pinned CTA, and follow-up offer |
+
 #### Step 12: Update the channel learning loop
 
 This skill can improve its recommendations for a specific creator by learning from measured results the user provides. It does not silently update itself. Only write or revise learning files when the user asks for post-publish review, learning, self-improvement, or channel memory.
@@ -686,6 +801,9 @@ Learning output must include:
 - publish timing signals
 - intro-retention signals
 - subscriber-conversion signals
+- CTA and link-conversion signals
+- business-funnel breakpoints
+- channel-type-specific conversion learnings
 - next 3 rules to test
 - recommended edits to `learning/creator_style_guide.md`, `learning/platform_rules.md`, or `learning/title_patterns.md`
 
@@ -909,6 +1027,27 @@ Recommended / Cautious / Not recommended
 | First 30s retention | | | |
 | Packaging-to-30s conversion | | | |
 
+## Subscriber Conversion Plan
+- Subscribe reason:
+- Series or channel promise:
+- Spoken CTA:
+- Pinned comment CTA:
+- End screen path:
+
+## CTA / Link Conversion
+- Primary CTA:
+- Backup CTA:
+- Description first lines:
+- Top link:
+- Offer-message match check:
+
+## Business Funnel Path
+- Entry format:
+- Trust asset:
+- Next watch path:
+- Offer path:
+- Main breakpoint risk:
+
 ## Learning Plan
 - Metrics to record after publishing:
 - Hypotheses being tested:
@@ -939,6 +1078,10 @@ Recommended / Cautious / Not recommended
 - Topic:
 - Publish timing:
 - Platform differences:
+- Subscriber conversion:
+- CTA / link conversion:
+- Funnel breakpoint:
+- Channel-type fit:
 
 ## Rules To Keep Testing
 1.
