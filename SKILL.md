@@ -43,6 +43,20 @@ Use this skill when the user asks to:
 - Review published-video performance and update the creator's reusable channel knowledge base.
 - Compare YouTube, Bilibili, Shorts, long-form, live, and Premiere outcomes after publishing.
 
+## Fast routing
+
+Use this quick map before reading the full workflow:
+
+| User need | Start here | Usually continue to |
+|---|---|---|
+| channel diagnosis or repositioning | Step 1-3 | Step 5, Step 14 |
+| keyword validation or search-led topic selection | Step 3-4C | Step 6, Step 11 |
+| title, thumbnail, description, or upload optimization | Step 6-8 | Step 10, Step 14 |
+| first 30 seconds or retention problem | Step 7 | Step 8, Step 11 |
+| live-stream growth or publishing schedule | Step 9-10 | Step 11, Step 14 |
+| post-publish review or creator learning | Step 11-12 | Step 14 |
+| YPP, copyright, reused content, or AI risk | Step 13 | Step 14 |
+
 ## Operating philosophy
 
 ### 1. Video is homework, not a masterpiece
@@ -118,7 +132,7 @@ Never recommend:
 - compilation without transformation
 - low-effort reaction or narration over reused footage
 
-## Required input schema
+## Required input
 
 When possible, gather this information:
 
@@ -147,7 +161,7 @@ main_problem:
 
 If information is missing, proceed with assumptions and mark them.
 
-## Standard project folder
+## Standard project structure
 
 For Codex projects, use this structure:
 
@@ -188,7 +202,20 @@ For Codex projects, use this structure:
 
 ## Main workflow
 
-### Step 1: Determine channel stage
+### Workflow map
+
+Use the workflow in four passes:
+
+1. Strategy foundation: Step 1-5
+2. Search, packaging, and retention: Step 6-8
+3. Distribution, review, and learning: Step 9-12
+4. Safety and action plan: Step 13-14
+
+Start at the nearest relevant step when the user asks for a narrow task. Run the full sequence only when doing end-to-end channel or upload work.
+
+### Phase 1: Strategy foundation
+
+#### Step 1: Determine channel stage
 
 | Stage | Typical state | Main job |
 |---|---|---|
@@ -200,7 +227,7 @@ For Codex projects, use this structure:
 
 Do not judge only by subscriber count. Also inspect upload count, recent performance, best/worst spread, packaging, comments, cadence, and monetization fit.
 
-### Step 2: Rewrite positioning
+#### Step 2: Rewrite positioning
 
 Use this formula:
 
@@ -226,7 +253,7 @@ Better positioning:
 我帮助想做中文 YouTube 的新手创作者，用账号诊断、案例拆解和数据复盘，解决选题、起号、YPP 和变现问题。
 ```
 
-### Step 3: Score niche and topic opportunities
+#### Step 3: Score niche and topic opportunities
 
 Use the scoring model:
 
@@ -259,7 +286,7 @@ First 30s hook:
 Post-publish metrics to watch:
 ```
 
-### Step 4: Use vidIQ as data validation, not final strategy
+#### Step 4: Use vidIQ as data validation, not final strategy
 
 vidIQ is the external opportunity layer. YouTube Studio is the first-party result layer.
 
@@ -282,7 +309,82 @@ Low competition may mean opportunity, or no demand.
 SEO score is a metadata health check, not proof that viewers will watch.
 ```
 
-### Step 5: Build content pillars
+Use the search workflow below in order when the topic depends on search discovery.
+
+##### Search workflow A: Audit search relevance fields
+
+Priority order for textual relevance:
+
+| Field | Priority | How to use it |
+|---|---|---|
+| `title` | highest | put the core query and the click reason here |
+| `keywords` / tags | high for query alignment, limited for overall growth | use to reinforce query intent and close obvious metadata gaps, not as a hack |
+| `shortDescription` | high | use the first 1-3 lines to restate the topic naturally and cover adjacent phrasing |
+| `author` / `ownerChannelName` | medium | channel naming can reinforce topic association over time |
+| `category` | low | useful for context, but not a primary ranking lever |
+
+Keep both rules true:
+
+```text
+Text relevance is not the same thing as guaranteed top ranking.
+```
+
+- metadata alignment matters for search understanding
+- tags alone are still weak compared with title, description, retention, and viewer satisfaction
+
+##### Search workflow B: Decompose the query into core concepts
+
+Example:
+
+```text
+Search query: colorful condo kitchen design
+Core concepts: colorful / condo / kitchen / design
+```
+
+For search-led videos, audit query coverage like this:
+
+1. Split the target query into 3-6 core concepts.
+2. Check which concepts appear in the title.
+3. Check which concepts are reinforced in tags/keywords.
+4. Check whether the first lines of the description naturally cover missing concepts or close variants.
+5. If transcript, captions, or subtitles exist, verify that the spoken opening also supports the promised topic.
+6. Mark the total hit rate as partial, strong, or near-complete.
+
+Working rule:
+
+```text
+The more completely the core concepts are covered across title, description, keywords/tags, and spoken content, the stronger the video's textual relevance.
+```
+
+Example audit:
+
+```text
+Query: colorful condo kitchen design
+Title hits: condo, color
+Keyword hits: condo, colorful, kitchen, design
+Description hits: color
+Result: 4/4 core concepts represented across metadata surfaces
+```
+
+##### Search workflow C: Separate ranking signal groups
+
+| Signal group | What it includes |
+|---|---|
+| Text relevance | title, description, tags/keywords, subtitles/transcript |
+| Authority | subscriber base, channel history, external embeds/citations, topic trust |
+| Engagement | plays, click-through rate, likes, comments, shares, watch time quality |
+| Freshness | publish date, recent audience activity, timeliness of the topic |
+
+If a video is highly relevant but still not ranking well, use this diagnosis:
+
+| Situation | Likely explanation |
+|---|---|
+| high metadata alignment, weak ranking | low authority or weak engagement signals |
+| high authority, weak ranking | poor title/topic fit or low freshness |
+| high CTR, low sustained ranking | intro or full-video satisfaction is too weak |
+| fresh upload, early lift then decay | freshness helped, but authority/engagement did not hold |
+
+#### Step 5: Build content pillars
 
 A channel should have 3-5 repeatable content pillars.
 
@@ -297,7 +399,9 @@ For YouTube-ops channels, use:
 | Risk avoidance | YPP, copyright, AI, reused-content safety |
 | Trend interpretation | AI, platform changes, monetization changes |
 
-### Step 6: Package titles and thumbnails
+### Phase 2: Search, packaging, and retention
+
+#### Step 6: Package titles and thumbnails
 
 Title is not a summary. It is the viewer's reason to click.
 
@@ -333,6 +437,16 @@ Thumbnail rules:
 - complements title instead of repeating it
 - does not create a promise the intro cannot deliver
 
+Search-led packaging rules:
+
+- For search-led videos, define one primary query and 3-6 core concepts before writing metadata.
+- Put the main query or its clearest natural-language version in the title whenever possible.
+- Use the first lines of the description to restate the topic in human language, not keyword stuffing.
+- Use tags/keywords to reinforce synonyms, variants, and adjacent terms that did not fit naturally in the title.
+- If captions or transcript text are available, make sure the spoken opening reflects the same search promise.
+- Do not force exact-match phrasing if it makes the title unreadable or weakens the click reason.
+- Prefer natural-language query coverage over awkward SEO phrasing.
+
 Default rendering rule:
 
 - When the user asks for a thumbnail image, cover draft, or final cover render, default to GPT img2.
@@ -361,7 +475,7 @@ Package scoring:
 | Differentiation | Would this stand out beside competitor videos on the same topic? |
 | Trust | Is the promise accurate without bait-and-switch? |
 
-### Step 7: Audit the first 30 seconds
+#### Step 7: Audit the first 30 seconds
 
 The opening must convert the click into continued viewing.
 
@@ -402,7 +516,7 @@ python scripts/analyze_first30.py \
 
 If video analysis is unavailable, use transcript and metadata analysis only.
 
-### Step 8: Optimize the full upload package
+#### Step 8: Optimize the full upload package
 
 When a project folder exists, inspect it as a publishing package, not just as a video file.
 
@@ -441,6 +555,7 @@ The output must include:
 - 3 title options with different angles
 - description draft with first two lines optimized for the viewer promise
 - keywords/tags with a warning that tags have limited discovery impact
+- search relevance audit for the main query and its core concepts
 - thumbnail brief plus 2-3 thumbnail concepts
 - default GPT img2 thumbnail render prompt for the top concept, plus 1-2 alternate prompts
 - if image generation is requested and credentials exist, generate at least 1 real thumbnail PNG into `thumbnails/`
@@ -455,10 +570,12 @@ Upload-package decision tree:
 | Strong footage, weak topic promise | viewer does not know why to click | rewrite title/thumbnail around outcome, conflict, or rare access |
 | Strong title, slow opening | click converts poorly into watch time | move proof/payoff into 0-8s |
 | Good video, no subscriber reason | views do not become fans | add series promise, pinned comment, end screen, next-video path |
-| Search topic, weak metadata | discovery is under-supported | tighten title/description/chapters/playlist; tags are secondary |
+| Search topic, weak metadata | discovery is under-supported | tighten title/description/query coverage first; then use tags to reinforce missing concepts |
 | Live topic, no replay plan | live spike disappears | clip Shorts, redirect to Premiere/VOD, pin next action |
 
-### Step 9: Use live streams as a growth loop
+### Phase 3: Distribution, review, and learning
+
+#### Step 9: Use live streams as a growth loop
 
 Live can accelerate subscriber growth when it is designed as a repeatable funnel, not as a random broadcast.
 
@@ -484,7 +601,7 @@ Live planning checklist:
 - create 3-7 Shorts or clips from the best moments
 - review subscribers gained, average concurrent viewers, chat rate, replay views, and Shorts lift
 
-### Step 10: Publish timing and distribution
+#### Step 10: Publish timing and distribution
 
 Do not rely on generic "best time to post" rules when channel data exists.
 
@@ -504,7 +621,7 @@ Distribution checklist:
 - if using live, set up Live Redirect or a Premiere path when eligible
 - record post-publish metrics at 2h, 24h, 72h, and 7d
 
-### Step 11: Review post-publish data
+#### Step 11: Review post-publish data
 
 Never interpret one metric alone.
 
@@ -518,7 +635,16 @@ Use combinations:
 | high views, low subscribers | weak channel promise or creator identity | add series and follow reason |
 | high comments, low views | narrow but engaged audience | deepen niche and test adjacent topics |
 
-### Step 12: Update the channel learning loop
+For search-led videos, also review:
+
+| Pattern | Likely problem | First fix |
+|---|---|---|
+| impressions low, metadata match low | search system may not understand the topic clearly | rewrite title and first description lines around the primary query |
+| metadata match high, impressions low | authority or freshness may be limiting discovery | compare against stronger channels and newer videos on the same query |
+| impressions present, CTR low | search relevance exists but packaging is weak | improve click reason without breaking query alignment |
+| CTR okay, watch time weak | metadata matched but viewer satisfaction failed | tighten the intro and structure to better fulfill the search promise |
+
+#### Step 12: Update the channel learning loop
 
 This skill can improve its recommendations for a specific creator by learning from measured results the user provides. It does not silently update itself. Only write or revise learning files when the user asks for post-publish review, learning, self-improvement, or channel memory.
 
@@ -563,7 +689,9 @@ Learning output must include:
 - next 3 rules to test
 - recommended edits to `learning/creator_style_guide.md`, `learning/platform_rules.md`, or `learning/title_patterns.md`
 
-### Step 13: Apply YPP / copyright / AI risk review
+### Phase 4: Safety and action plan
+
+#### Step 13: Apply YPP / copyright / AI risk review
 
 Always separate:
 
@@ -590,7 +718,7 @@ Hard rule:
 Permission to use content does not automatically mean it is monetizable.
 ```
 
-### Step 14: Produce action plan
+#### Step 14: Produce action plan
 
 Every output must end with concrete next steps:
 
@@ -602,6 +730,18 @@ Every output must end with concrete next steps:
 - what to add to the learning log after publishing
 
 ## Output templates
+
+### Template index
+
+Use the closest template instead of improvising structure:
+
+| Need | Template |
+|---|---|
+| channel diagnosis | Channel diagnosis |
+| topic or keyword decision | Topic validation |
+| intro or retention fix | First-30-second report |
+| full upload optimization | Upload-package optimization report |
+| post-publish review and creator learning | Post-publish learning report |
 
 ### Channel diagnosis
 
@@ -715,6 +855,16 @@ Recommended / Cautious / Not recommended
 - Biggest bottleneck:
 - Highest-leverage fix:
 
+## Search Relevance Audit
+- Primary query:
+- Core concepts:
+- Title hits:
+- Description hits:
+- Tag/keyword hits:
+- Transcript/caption support:
+- Coverage score:
+- Relevance verdict:
+
 ## Edit Plan
 | Time | Keep / Cut / Move | Reason | Exact edit |
 |---|---|---|---|
@@ -802,7 +952,9 @@ Recommended / Cautious / Not recommended
 - `learning/learning_log.md`:
 ```
 
-## Scripts
+## Implementation
+
+### Scripts
 
 This skill includes:
 
@@ -852,7 +1004,7 @@ python scripts/update_learning_profile.py \
   --out-dir reports
 ```
 
-## Quality bar
+### Quality bar
 
 The assistant using this skill must:
 
@@ -871,7 +1023,7 @@ The assistant using this skill must:
 - only update learning files when the user asks for learning, self-improvement, or post-publish review
 - distinguish durable channel rules from one-video hypotheses
 
-## Reference files
+### Reference files
 
 Load these only when needed:
 
